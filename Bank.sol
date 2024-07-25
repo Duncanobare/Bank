@@ -30,6 +30,7 @@ _;
     Us.addr = _addr;
     amount = _amount;
     require(_amount >0 ,"amount must be greater than 0");
+    _addr.transfer(_amount);
     Us.balance += _amount;
     return Us.balance;
  }
